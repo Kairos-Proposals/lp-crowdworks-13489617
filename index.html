@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kairos ご提案 | INFINITY株式会社様 LP集客 長期伴走プラン</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy: #0B2138;
+    --navy-light: #16324F;
+    --teal: #0FA3A3;
+    --amber: #F4A45A;
+    --mint: #6FCF97;
+    --bg: #F4F6F7;
+    --ink: #14202B;
+    --paper: #FFFFFF;
+  }
+
+  *{ box-sizing: border-box; }
+  html{ scroll-behavior: smooth; }
+  body{
+    margin:0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Noto Sans JP', sans-serif;
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1,h2,h3{
+    font-family: 'Zen Kaku Gothic New','Space Grotesk', sans-serif;
+    font-weight: 900;
+    margin: 0;
+  }
+  .num{ font-family: 'Space Grotesk', sans-serif; }
+  p{ margin: 0; }
+  section{ padding: 88px 24px; }
+  .inner{ max-width: 1080px; margin: 0 auto; }
+  .eyebrow{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12.5px;
+    letter-spacing: 0.12em;
+    font-weight: 700;
+    color: var(--teal);
+    margin-bottom: 20px;
+  }
+  .eyebrow::before{
+    content:'';
+    width: 26px; height: 2px;
+    background: var(--teal);
+    display: inline-block;
+  }
+
+  /* ===== HERO ===== */
+  .hero{
+    position: relative;
+    background: radial-gradient(circle at 20% 20%, #123554 0%, var(--navy) 55%, #081522 100%);
+    color: #EAF3F5;
+    padding: 96px 24px 100px;
+    overflow: hidden;
+  }
+  .hero::before{
+    content:'';
+    position:absolute; inset:0;
+    background-image:
+      repeating-linear-gradient(90deg, rgba(15,163,163,0.08) 0px, rgba(15,163,163,0.08) 1px, transparent 1px, transparent 64px),
+      repeating-linear-gradient(0deg, rgba(15,163,163,0.08) 0px, rgba(15,163,163,0.08) 1px, transparent 1px, transparent 64px);
+    pointer-events:none;
+  }
+  .hero-inner{
+    max-width: 880px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+  }
+  .badge{
+    display:inline-block;
+    padding: 8px 18px;
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 999px;
+    font-size: 13px;
+    letter-spacing: 0.06em;
+    color: #BFEAEA;
+    margin-bottom: 40px;
+    background: rgba(255,255,255,0.04);
+  }
+  .infinity-graphic{
+    width: 190px;
+    height: 96px;
+    margin: 0 auto 40px;
+    position: relative;
+  }
+  .infinity-graphic .loop{
+    position:absolute;
+    width: 96px; height: 96px;
+    border-radius: 50%;
+    border: 6px solid var(--teal);
+    top: 0;
+    box-shadow: 0 0 26px rgba(15,163,163,0.55);
+  }
+  .infinity-graphic .loop.right{
+    left: 66px;
+    border-color: var(--amber);
+    box-shadow: 0 0 26px rgba(244,164,90,0.55);
+  }
+  .infinity-graphic .loop.left{ left: 0; }
+  .hero h1{
+    font-size: clamp(28px, 4.6vw, 44px);
+    line-height: 1.45;
+    color: #fff;
+    margin-bottom: 26px;
+  }
+  .hero h1 .accent{ color: var(--amber); }
+  .hero .lead{
+    font-size: 16px;
+    color: #B7CBD6;
+    max-width: 620px;
+    margin: 0 auto;
+  }
+  .hero .from{
+    margin-top: 44px;
+    font-size: 13.5px;
+    color: #7FA1AE;
+    letter-spacing: 0.05em;
+  }
+
+  /* ===== UNDERSTANDING ===== */
+  .understanding{ background: var(--paper); }
+  .understanding .inner{ max-width: 920px; }
+  .understanding h2{
+    font-size: clamp(22px, 3.2vw, 30px);
+    color: var(--navy);
+    margin-bottom: 28px;
+  }
+  .understanding .lead-text{
+    font-size: 16px;
+    color: #33475A;
+    max-width: 680px;
+    margin-bottom: 48px;
+  }
+  .understanding .lead-text strong{
+    color: var(--navy);
+    border-bottom: 2px solid var(--amber);
+  }
+
+  .business-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+  .biz-card{
+    background: var(--bg);
+    border-radius: 14px;
+    padding: 24px 16px 20px;
+    text-align: center;
+    border: 1px solid #E2E8EA;
+  }
+  .biz-icon{ width: 56px; height: 56px; margin: 0 auto 16px; position: relative; }
+  .biz-icon.vending{
+    width: 40px; height: 56px; margin: 0 auto 16px;
+    background: var(--navy-light);
+    border-radius: 4px;
+    position: relative;
+  }
+  .biz-icon.vending::before{
+    content:''; position:absolute; top:6px; left:6px; right:6px; height:16px;
+    background: rgba(15,163,163,0.6); border-radius: 2px;
+  }
+  .biz-icon.vending::after{
+    content:''; position:absolute; bottom:8px; left:6px; width:8px; height:8px;
+    background: var(--amber); border-radius: 50%;
+    box-shadow: 14px 0 0 var(--mint);
+  }
+  .biz-icon.battery{
+    width: 52px; height: 30px; margin: 13px auto 16px;
+    border: 3px solid var(--mint);
+    border-radius: 4px;
+    position: relative;
+  }
+  .biz-icon.battery::before{
+    content:''; position:absolute; right:-7px; top:8px;
+    width:5px; height:12px; background: var(--mint); border-radius:1px;
+  }
+  .biz-icon.battery::after{
+    content:''; position:absolute; top:4px; left:4px; width:60%; height:calc(100% - 8px);
+    background: var(--mint); opacity: 0.5;
+  }
+  .biz-icon.house{
+    width: 0; height: 0;
+    margin: 6px auto 0;
+    border-left: 26px solid transparent;
+    border-right: 26px solid transparent;
+    border-bottom: 22px solid var(--amber);
+    position: relative;
+  }
+  .biz-icon.house::after{
+    content:''; position:absolute; top:22px; left:-18px;
+    width:36px; height:24px; background: var(--navy-light);
+  }
+  .biz-icon.web{
+    width: 56px; height: 42px; margin: 7px auto 16px;
+    background: var(--paper);
+    border: 2px solid var(--teal);
+    border-radius: 4px;
+    position: relative;
+  }
+  .biz-icon.web::before{
+    content:''; position:absolute; top:0; left:0; right:0; height:10px;
+    background: var(--teal);
+  }
+  .biz-icon.web::after{
+    content:''; position:absolute; top:16px; left:6px; right:6px; height:4px;
+    background: #D5E4E7;
+    box-shadow: 0 8px 0 #D5E4E7;
+  }
+  .biz-card .biz-house-wrap{ height: 56px; display:flex; align-items:flex-end; justify-content:center; margin-bottom:16px; }
+  .biz-card h3{ font-size: 14.5px; color: var(--navy); margin-bottom: 6px; }
+  .biz-card p{ font-size: 12.5px; color: #6C7C87; }
+
+  /* ===== VALUES ===== */
+  .values{
+    background: linear-gradient(160deg, var(--navy) 0%, #0E2740 60%, #0B2138 100%);
+    color: #EAF3F5;
+  }
+  .values .inner{ max-width: 1080px; }
+  .values h2{
+    font-size: clamp(22px, 3.2vw, 30px);
+    color: #fff;
+    margin-bottom: 12px;
+  }
+  .values .sub{
+    color: #9FBAC5;
+    font-size: 15px;
+    max-width: 620px;
+    margin-bottom: 48px;
+  }
+  .value-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .value-card{
+    background: rgba(255,255,255,0.045);
+    border: 1px solid rgba(255,255,255,0.09);
+    border-top: 3px solid var(--teal);
+    border-radius: 12px;
+    padding: 28px 22px;
+  }
+  .value-card:nth-child(2){ border-top-color: var(--amber); }
+  .value-card:nth-child(3){ border-top-color: var(--mint); }
+  .value-card:nth-child(4){ border-top-color: var(--teal); }
+  .value-card:nth-child(5){ border-top-color: var(--amber); }
+  .value-card .vnum{
+    font-size: 13px;
+    color: #7FA1AE;
+    margin-bottom: 14px;
+    letter-spacing: 0.05em;
+  }
+  .value-card h3{
+    font-size: 17px;
+    color: #fff;
+    margin-bottom: 12px;
+    line-height: 1.5;
+  }
+  .value-card p{
+    font-size: 13.6px;
+    color: #B7CBD6;
+  }
+
+  /* ===== PROCESS ===== */
+  .process{ background: var(--paper); }
+  .process .inner{ max-width: 980px; }
+  .process h2{
+    font-size: clamp(22px, 3.2vw, 30px);
+    color: var(--navy);
+    margin-bottom: 12px;
+  }
+  .process .sub{
+    color: #556472;
+    font-size: 15px;
+    margin-bottom: 52px;
+    max-width: 640px;
+  }
+  .timeline{
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .step{
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    gap: 24px;
+    position: relative;
+    padding-bottom: 44px;
+  }
+  .step:last-child{ padding-bottom: 0; }
+  .step-marker{
+    display:flex; flex-direction:column; align-items:center;
+  }
+  .step-dot{
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    background: var(--navy);
+    color: #fff;
+    display:flex; align-items:center; justify-content:center;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    flex-shrink: 0;
+    z-index: 2;
+  }
+  .step:nth-child(1) .step-dot{ background: var(--teal); }
+  .step:nth-child(2) .step-dot{ background: var(--amber); color:#3A2A15; }
+  .step:nth-child(3) .step-dot{ background: var(--navy); }
+  .step:nth-child(4) .step-dot{ background: var(--mint); color:#173A26; }
+  .step:nth-child(5) .step-dot{ background: var(--navy-light); }
+  .step-line{
+    width: 2px;
+    flex: 1;
+    background: #D9E2E5;
+    margin-top: 6px;
+  }
+  .step:last-child .step-line{ display: none; }
+  .step-body{ padding-top: 4px; }
+  .step-body .stage{
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    color: var(--teal);
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .step-body h3{
+    font-size: 17px;
+    color: var(--navy);
+    margin-bottom: 8px;
+  }
+  .step-body p{
+    font-size: 14px;
+    color: #4C5C68;
+  }
+
+  /* ===== CLOSING ===== */
+  .closing{
+    background: radial-gradient(circle at 80% 30%, #123554 0%, var(--navy) 55%, #081522 100%);
+    color: #EAF3F5;
+    text-align: center;
+  }
+  .closing .inner{ max-width: 680px; }
+  .closing h2{
+    font-size: clamp(24px, 3.6vw, 32px);
+    color: #fff;
+    margin-bottom: 22px;
+    line-height: 1.5;
+  }
+  .closing p{
+    color: #B7CBD6;
+    font-size: 15.5px;
+    margin-bottom: 12px;
+  }
+  .closing .answer-list{
+    text-align: left;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px;
+    padding: 22px 26px;
+    margin: 32px 0 36px;
+    font-size: 13.6px;
+    color: #C6D8DF;
+  }
+  .closing .answer-list li{ margin-bottom: 8px; }
+  .closing .answer-list li:last-child{ margin-bottom: 0; }
+  .cta-btn{
+    display: inline-block;
+    background: var(--amber);
+    color: #2B1D0C;
+    font-weight: 700;
+    padding: 16px 40px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-size: 15.5px;
+    letter-spacing: 0.02em;
+    box-shadow: 0 10px 28px rgba(244,164,90,0.28);
+  }
+  .closing .note{
+    margin-top: 20px;
+    font-size: 12.5px;
+    color: #7FA1AE;
+  }
+
+  footer{
+    background: #081522;
+    color: #5F7986;
+    text-align: center;
+    padding: 28px 24px;
+    font-size: 12.5px;
+    letter-spacing: 0.04em;
+  }
+
+  @media (max-width: 860px){
+    .business-grid{ grid-template-columns: repeat(2, 1fr); }
+    .value-grid{ grid-template-columns: 1fr; }
+  }
+  @media (max-width: 600px){
+    section{ padding: 64px 20px; }
+    .step{ grid-template-columns: 44px 1fr; gap: 16px; }
+    .hero{ padding: 76px 20px 80px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <span class="badge">Kairos（Web制作・システム開発チーム）からのご提案</span>
+    <div class="infinity-graphic">
+      <span class="loop left"></span>
+      <span class="loop right"></span>
+    </div>
+    <h1>一台の自販機から始めて、<br><span class="accent">無限に育てる</span>集客の仕組みをつくる。</h1>
+    <p class="lead">IoT自販機・蓄電池・不動産・Web制作――複数事業を持つINFINITY様の「まずは小さく、正しく」というご要望に、私たちKairosが実務で応えます。</p>
+    <div class="from">INFINITY株式会社 様｜長期伴走型 Webマーケター募集 へのご提案</div>
+  </div>
+</header>
+
+<section class="understanding">
+  <div class="inner">
+    <span class="eyebrow">UNDERSTANDING</span>
+    <h2>「まだ成長途中だからこそ、正しい順番で始めたい」</h2>
+    <p class="lead-text">
+      複数事業のLPを抱えながら、これから本格的に集客を進めていくフェーズ。予算は限られていても、<strong>クリックの先の問い合わせ・商談まで見て、地に足のついた改善を続けたい</strong>――募集内容から、私たちはそのように理解しました。単発の作業者ではなく、事業を理解し、結果と課題を率直に共有しながら一緒に育てていく相手を必要としている。これは、私たちKairosが最も得意とする関わり方です。
+    </p>
+    <div class="business-grid">
+      <div class="biz-card">
+        <div class="biz-icon vending"></div>
+        <h3>IoT自販機</h3>
+        <p>最初の対象。現状分析から着手</p>
+      </div>
+      <div class="biz-card">
+        <div class="biz-icon battery"></div>
+        <h3>蓄電池</h3>
+        <p>結果を見て拡張を検討</p>
+      </div>
+      <div class="biz-card">
+        <div class="biz-house-wrap"><div class="biz-icon house"></div></div>
+        <h3>不動産</h3>
+        <p>将来的な展開先の一つ</p>
+      </div>
+      <div class="biz-card">
+        <div class="biz-icon web"></div>
+        <h3>Web制作</h3>
+        <p>事業成長に合わせて相談</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="values">
+  <div class="inner">
+    <span class="eyebrow" style="color:var(--amber);">WHAT KAIROS OFFERS</span>
+    <h2>Kairosがご提供できる価値</h2>
+    <p class="sub">「まずは小規模で、無理のない範囲で」というご希望に合わせ、必要な業務だけを、確実な形でご提供します。</p>
+    <div class="value-grid">
+      <div class="value-card">
+        <div class="vnum num">01</div>
+        <h3>限られた予算での優先順位設計</h3>
+        <p>広告費と委託費の両方を踏まえ、IoT自販機LPで「今やるべきこと」だけに絞った現実的な計画をご提案します。全業務を一括で抱えることはしません。</p>
+      </div>
+      <div class="value-card">
+        <div class="vnum num">02</div>
+        <h3>検索広告の設計・運用</h3>
+        <p>Google検索広告のキーワード設計、広告文作成、検索語句レポートの確認まで一貫して対応。無駄なクリックを削り、少ない予算でも成果につなげます。</p>
+      </div>
+      <div class="value-card">
+        <div class="vnum num">03</div>
+        <h3>GA4・GTM・計測の土台整備</h3>
+        <p>問い合わせ計測が正しく機能しているかを最初に確認。クリック数ではなく「問い合わせ・商談につながったか」を一緒に見られる状態を作ります。</p>
+      </div>
+      <div class="value-card">
+        <div class="vnum num">04</div>
+        <h3>LP改善のご提案</h3>
+        <p>Web制作チームとしての知見を活かし、広告経由の訪問者に合わせたLP文言・構成の改善案を提示。実装まで一体で動けるのが強みです。</p>
+      </div>
+      <div class="value-card">
+        <div class="vnum num">05</div>
+        <h3>率直な振り返りと長期伴走</h3>
+        <p>良い結果も伸び悩みも隠さず共有し、次の一手を一緒に決めます。結果を踏まえ、蓄電池・不動産・Web制作LPへの展開もその都度ご相談します。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="process">
+  <div class="inner">
+    <span class="eyebrow">HOW WE START</span>
+    <h2>進め方とスケジュールイメージ</h2>
+    <p class="sub">最初からすべてを依頼いただく前提ではありません。まずは現状確認から、範囲を合意しながら段階的に進めます。</p>
+    <div class="timeline">
+      <div class="step">
+        <div class="step-marker"><div class="step-dot num">0</div><div class="step-line"></div></div>
+        <div class="step-body">
+          <div class="stage">STEP 0 ／ 初回1〜2週間</div>
+          <h3>現状確認・ヒアリング</h3>
+          <p>IoT自販機LPの現状（広告設定・GA4/GTM・問い合わせ計測）を確認し、実績や担当範囲を含めてこれまでの取り組みをヒアリングします。</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-marker"><div class="step-dot num">1</div><div class="step-line"></div></div>
+        <div class="step-body">
+          <div class="stage">STEP 1 ／ 提案</div>
+          <h3>優先施策と業務範囲のご提案</h3>
+          <p>限られた予算内で優先すべき施策と、小規模な業務範囲・費用感を具体的にご提示。双方が納得できる形をご相談します。</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-marker"><div class="step-dot num">2</div><div class="step-line"></div></div>
+        <div class="step-body">
+          <div class="stage">STEP 2 ／ 実行フェーズ</div>
+          <h3>広告運用とLP改善の実行</h3>
+          <p>合意した範囲で検索広告の設計・運用を開始。広告文・検索語句・LPの改善を継続的に行います。</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-marker"><div class="step-dot num">3</div><div class="step-line"></div></div>
+        <div class="step-body">
+          <div class="stage">STEP 3 ／ 月次〜隔週</div>
+          <h3>振り返りとKPI確認</h3>
+          <p>クリック数だけでなく問い合わせ・商談化までを確認し、良い点・課題を率直に共有。次の打ち手を一緒に決めます。</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-marker"><div class="step-dot num">4</div></div>
+        <div class="step-body">
+          <div class="stage">STEP 4 ／ 事業成長に合わせて</div>
+          <h3>他事業LPへの展開検討</h3>
+          <p>IoT自販機での結果を踏まえ、蓄電池・不動産・Web制作LPの集客についても、予算と体制に応じて段階的にご相談します。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="closing">
+  <div class="inner">
+    <h2>まずは、IoT自販機のLPから。<br>小さく始めて、一緒に育てていきましょう。</h2>
+    <p>Kairosは、単発の運用代行ではなく、事業を理解した上で長く伴走することを前提にご提案いたします。</p>
+    <ul class="answer-list">
+      <li>・ Google検索広告／GA4・GTM／LP改善、いずれも自社チームで一貫して対応可能です</li>
+      <li>・ まずは現状の計測環境と広告設定の確認から着手します</li>
+      <li>・ 小規模な業務範囲・費用のご提案は、ヒアリング後に具体的にお出しします</li>
+      <li>・ 結果を見ながら、予算・依頼範囲を広げるご相談も継続的に行います</li>
+    </ul>
+    <a class="cta-btn" href="#">Kairosに相談してみる</a>
+    <div class="note">まずは1度、現状のLPと計測状況を拝見させてください。</div>
+  </div>
+</section>
+
+<footer>
+  Kairos — Web制作・システム開発チーム ｜ INFINITY株式会社様への提案資料
+</footer>
+
+</body>
+</html>
